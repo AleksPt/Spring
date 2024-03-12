@@ -40,9 +40,5 @@ final class DataStore {
         "swing"
     ]
     
-    let duration = Double.random(in: 0.3...1)
-    
-    let delay = Double.random(in: 0.3...1)
-    
     private init() {}
 }

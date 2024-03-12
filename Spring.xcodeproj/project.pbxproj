@@ -62,14 +62,12 @@
 		FA6CC54D2BA0CF53003D989D /* Spring */ = {
 			isa = PBXGroup;
 			children = (
-				FA6CC54E2BA0CF53003D989D /* AppDelegate.swift */,
-				FA6CC5502BA0CF53003D989D /* SceneDelegate.swift */,
 				FA6CC56C2BA0DBD4003D989D /* ViewController */,
-				FA6CC5692BA0DB96003D989D /* Model */,
 				FA6CC56B2BA0DBAC003D989D /* Storyboards */,
+				FA6CC5692BA0DB96003D989D /* Model */,
 				FA6CC56A2BA0DBA3003D989D /* Services */,
+				FA6CC56D2BA0DC1F003D989D /* App */,
 				FA6CC5572BA0CF56003D989D /* Assets.xcassets */,
-				FA6CC55C2BA0CF56003D989D /* Info.plist */,
 			);
 			path = Spring;
 			sourceTree = "<group>";
@@ -105,6 +103,16 @@
 				FA6CC5522BA0CF53003D989D /* ViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		FA6CC56D2BA0DC1F003D989D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FA6CC54E2BA0CF53003D989D /* AppDelegate.swift */,
+				FA6CC5502BA0CF53003D989D /* SceneDelegate.swift */,
+				FA6CC55C2BA0CF56003D989D /* Info.plist */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,7 +350,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L23B96GPNM;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Spring/Info.plist;
+				INFOPLIST_FILE = Spring/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -373,7 +381,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L23B96GPNM;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Spring/Info.plist;
+				INFOPLIST_FILE = Spring/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

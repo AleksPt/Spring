@@ -18,10 +18,22 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e74-rU-vMD" customClass="SpringView" customModule="SpringAnimation">
                                 <rect key="frame" x="76.666666666666686" y="220" width="240" height="240"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVG-18-7Cu">
+                                        <rect key="frame" x="8" y="8" width="224" height="224"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="HVG-18-7Cu" secondAttribute="bottom" constant="8" id="FNZ-3c-wOr"/>
                                     <constraint firstAttribute="width" constant="240" id="V6N-WK-HYd"/>
+                                    <constraint firstItem="HVG-18-7Cu" firstAttribute="top" secondItem="e74-rU-vMD" secondAttribute="top" constant="8" id="aBa-iV-ls6"/>
+                                    <constraint firstAttribute="trailing" secondItem="HVG-18-7Cu" secondAttribute="trailing" constant="8" id="ame-ZQ-A3W"/>
                                     <constraint firstAttribute="height" constant="240" id="l70-Xk-eV2"/>
+                                    <constraint firstItem="HVG-18-7Cu" firstAttribute="leading" secondItem="e74-rU-vMD" secondAttribute="leading" constant="8" id="ppf-Ea-saB"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aM6-zt-S5G" customClass="SpringButton" customModule="SpringAnimation">
@@ -50,11 +62,12 @@
                     <connections>
                         <outlet property="animationButton" destination="aM6-zt-S5G" id="WNX-8S-USX"/>
                         <outlet property="animationView" destination="e74-rU-vMD" id="pDb-Yo-769"/>
+                        <outlet property="descriptionTextView" destination="HVG-18-7Cu" id="eha-uy-mie"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24" y="4"/>
+            <point key="canvasLocation" x="23.664122137404579" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>

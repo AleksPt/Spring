@@ -20,8 +20,8 @@ struct Animations {
         for index in 0..<preset.count {
             let animation = Animations(
                 preset: preset[index],
-                duration: DataStore.shared.duration,
-                delay: DataStore.shared.delay
+                duration: Double.random(in: 0.3...1),
+                delay: Double.random(in: 0.5...1.5)
             )
             
             animations.append(animation)
