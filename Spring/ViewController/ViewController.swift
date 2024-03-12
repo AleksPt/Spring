@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var animationView: SpringView!
     @IBOutlet weak var animationButton: SpringButton!
     
+    private let animations = Animations.getAnimation()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         animationView.layer.cornerRadius = 15
@@ -21,6 +23,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func runAnimation(_ sender: SpringButton) {
+        
     }
     
 }

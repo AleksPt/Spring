@@ -31,7 +31,7 @@
                                     <constraint firstAttribute="height" constant="45" id="S90-y3-kSB"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Run"/>
                                 <connections>
                                     <action selector="runAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z2G-Yj-S04"/>
                                 </connections>
