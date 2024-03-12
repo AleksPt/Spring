@@ -11,32 +11,26 @@ import SpringAnimation
 class ViewController: UIViewController {
 
     @IBOutlet weak var animationView: SpringView!
-    @IBOutlet weak var animationButton: SpringButton!
-    @IBOutlet weak var descriptionTextView: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
-    private let animations = Animations.getAnimation()
-    
+    private var animation = Animations.getRandomAnimation()
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         animationView.layer.cornerRadius = 15
-        animationButton.layer.cornerRadius = 10
-        animationButton.tintColor = .black
-        
-        descriptionTextView.text = """
-                                preset:\n\(animations.randomElement()?.preset ?? "")\n
-                                duration:\n\(animations.randomElement()?.duration ?? 0)\n
-                                delay:\n\(animations.randomElement()?.delay ?? 0)
-                                """
+        descriptionLabel.text = animation.description
     }
 
-    @IBAction func runAnimation(_ sender: SpringButton) {
-        guard let animations = animations.randomElement() else { return }
-        descriptionTextView.text = """
-                                preset:\n\(animations.preset)\n
-                                duration:\n\(animations.duration)\n
-                                delay:\n\(animations.delay)
-                                """
+    @IBAction func runAnimation(_ sender: UIButton) {
+        descriptionLabel.text = animation.description
+        
+        animationView.animation = animation.preset
+        animationView.delay = animation.delay
+        animationView.duration = animation.duration
+        animationView.animate()
+        
+        animation = Animations.getRandomAnimation()
+        sender.setTitle("Run \(animation.preset)", for: .normal)
     }
-    
 }
 

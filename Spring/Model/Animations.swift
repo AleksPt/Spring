@@ -12,21 +12,19 @@ struct Animations {
     let duration: Double
     let delay: Double
     
-    static func getAnimation() -> [Animations] {
-        var animations: [Animations] = []
-        
-        let preset = DataStore.shared.presets
-        
-        for index in 0..<preset.count {
-            let animation = Animations(
-                preset: preset[index],
-                duration: Double.random(in: 0.3...1),
-                delay: Double.random(in: 0.5...1.5)
-            )
-            
-            animations.append(animation)
-        }
-        
-        return animations
+    var description: String {
+        return """
+        preset: \(preset)
+        duration: \(String(format: "%.02f", duration))
+        delay: \(String(format: "%.02f", delay))
+        """
+    }
+    
+    static func getRandomAnimation() -> Animations {
+        Animations(
+            preset: DataStore.shared.presets.randomElement() ?? "slideLeft",
+            duration: Double.random(in: 1...2),
+            delay: Double.random(in: 0.2...0.5)
+        )
     }
 }
